@@ -19,7 +19,6 @@ function defineReacttive(data, key, val) {
 		}
 	})
 }
-Dep.target = null
 function observer(data) {
 	if (!data || typeof data !== 'object') {
 		return
