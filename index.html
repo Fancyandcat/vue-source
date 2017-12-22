@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <input type="text" class="int">
+    <span class="text"></span>
+    <h1 id="name">{{name}}</h1>
+    <script src="observer.js"></script>
+    <script src="watcher.js"></script>
+    <script src="index.js"></script>
+    <script>
+    	let ele = document.querySelector('#name')
+    	let selfVue = new SelfVue({
+    		name: 'hello world'
+    	}, ele, 'name')
+    	window.setTimeout(function() {
+    		selfVue.data.name = 'canfoo'
+    	}, 2000)
+    </script>
+    </body>
+</html>
